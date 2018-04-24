@@ -8,3 +8,5 @@ blog/\.DS_Store
 blog/migrations/
 
 unicorns_blog/__pycache__/
+
+blog/__init__\.py
