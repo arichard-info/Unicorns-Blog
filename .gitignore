@@ -1,0 +1,10 @@
+
+blog/__pycache__/
+
+blog/\.DS_Store
+
+\.DS_Store
+
+blog/migrations/
+
+unicorns_blog/__pycache__/
