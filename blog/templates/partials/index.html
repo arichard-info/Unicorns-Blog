@@ -1,9 +1,7 @@
-{% extends "_base.html" %}
+{% extends "layouts/_base.html" %}
 {% block title %}Page d'accueil{% endblock %}
 
-	{% block body %}
-	    <h1>HELLO WORLD</h1>
-	    
+	{% block content %}	    
 	    {% for article in latests_articles %}
 	    	<hr />
 	        <h3 class="text-center">{{ article.title }}</h3>

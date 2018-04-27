@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        	{% block title %}Blog{% endblock %}
+    	</title>
+    </head>
+    <body>
+    	{% block header %}
+    		{% include 'components/header.html' %}
+    	{% endblock %}
+
+        {% block content %}
+        	Sorry, no content
+        {% endblock %}
+
+        {% block footer %}
+    		{% include 'components/footer.html' %}
+    	{% endblock %}
+    </body>
+</html
