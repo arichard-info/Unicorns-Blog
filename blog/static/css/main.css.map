@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,4FAAoF;ACA5F,IAAI;EACH,WAAW,EDEF,qBAAqB",
+"sources": ["src/settings/_fonts.scss","src/general/_body.scss"],
+"names": [],
+"file": "main.css"
+}

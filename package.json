@@ -1,0 +1,25 @@
+{
+  "name": "unicorns_blog",
+  "version": "1.0.0",
+  "description": "modules for unicorns_blog dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/Kalagounet/unicorns_blog.git"
+  },
+  "author": "arichard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Kalagounet/unicorns_blog/issues"
+  },
+  "homepage": "https://gitlab.com/Kalagounet/unicorns_blog#README",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
