@@ -1,11 +1,22 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from blog.models import Article, Comment
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 from .forms import CommentForm
+from blog.models import Article, Comment
+
+
+
 
 # Create your views here.
 def index(request):
-    articles = Article.objects.all()[:3]
-    return render(request, 'partials/index.html', {'latests_articles': articles})
+    articles_list = Article.objects.all()
+    paginator = Paginator(articles_list, 1)
+    page = request.GET.get('page')
+    articles = paginator.get_page(page)
+
+    return render(request, 'partials/index.html', {'articles': articles})
+
+
 
 def article(request, slug):
     article = get_object_or_404(Article, slug=slug)
@@ -21,8 +32,34 @@ def article(request, slug):
     return render(request, 'partials/single_article.html', {'article': article, 'form' : form})
 
 
+
+def search(request):
+    template = 'partials/search.html'
+    query = request.GET.get('q')
+    if query:
+        result = Article.objects.filter(Q(title__icontains = query) | Q(content__icontains = query))
+    else:
+        result = Article.objects.all()
+
+    paginator = Paginator(result, 6)
+    page = request.GET.get('page')
+    results = paginator.get_page(page)
+
+    context = {
+        'items' : results,
+    }
+
+    return render(request, template, context)
+
+
+
+
 def about(request):
     return render(request, 'partials/about.html', {})
 
+
 def contact(request):
     return render(request, 'partials/contact.html', {})
+
+
+
