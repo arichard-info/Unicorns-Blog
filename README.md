@@ -31,7 +31,7 @@ Se placer dans le dossier du projet :
     $ pip install -r requirements.txt
     $ npm install
     
- ### Lancement du serveur : 
+### Lancement du serveur : 
 
     $ python manage.py runserver
 
