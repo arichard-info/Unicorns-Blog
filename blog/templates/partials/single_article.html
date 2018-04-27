@@ -1,6 +1,7 @@
 {% extends "layouts/_base.html" %}
 {% block title %}Un article{% endblock %}
 {% block content %}
+  <img src="{{ article.image.url}}"/>
 	<h1>{{article.title}}</h1>
 	<p> {{ article.content }}</p>
    	<span> {{article.author}}</span>
@@ -9,6 +10,7 @@
    	<hr />
 {% for comment in article.comments.all %}
     <div class="comment">
+
         <div class="date">{{ comment.created_date }}</div>
         <strong>{{ comment.author }}</strong>
         <p>{{ comment.content|linebreaks }}</p>

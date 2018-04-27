@@ -10,7 +10,7 @@ from blog.models import Article, Comment
 # Create your views here.
 def index(request):
     articles_list = Article.objects.all()
-    paginator = Paginator(articles_list, 1)
+    paginator = Paginator(articles_list, 9)
     page = request.GET.get('page')
     articles = paginator.get_page(page)
 
@@ -37,14 +37,10 @@ def search(request):
     template = 'partials/search.html'
     query = request.GET.get('q')
     if query:
-        result = Article.objects.filter(Q(title__icontains = query) | Q(content__icontains = query))
+        results = Article.objects.filter(Q(title__icontains = query) | Q(content__icontains = query))
     else:
-        result = Article.objects.all()
-
-    paginator = Paginator(result, 6)
-    page = request.GET.get('page')
-    results = paginator.get_page(page)
-
+        results = Article.objects.all()
+        
     context = {
         'items' : results,
     }
