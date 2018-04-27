@@ -18,7 +18,7 @@ Projet réalisé en python sur le framework Django
 
 Lancement du virtualenv : 
    
-
+	$ cd unicorns_blog_env
     $ source bin/activate
     
   Déplacer ou cloner le dépôt du projet dans le répertoire créé (unicorns_blog_env)
@@ -31,7 +31,7 @@ Se placer dans le dossier du projet :
     $ pip install -r requirements.txt
     $ npm install
     
-### Lancement du serveur : 
+ ### Lancement du serveur : 
 
     $ python manage.py runserver
 
