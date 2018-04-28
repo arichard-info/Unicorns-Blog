@@ -1,5 +1,84 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC:700|Raleway:400,500,600,700");
+html {
+  font-size: 62.5%; }
+
 body {
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem; }
+
+header .header-navbar {
+  padding: 20px 0 20px;
+  background: #f2abc5; }
+  header .header-navbar .navbar .navbar-collapse .navbar-nav .nav-item {
+    padding-right: 10px;
+    padding-left: 10px; }
+    header .header-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+      position: relative;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #FFFFFF; }
+      header .header-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:after {
+        content: "";
+        position: absolute;
+        left: 9%;
+        bottom: 3px;
+        height: 2px;
+        width: 82%;
+        background: #FFFFFF;
+        transition: all .1s ease-in-out; }
+      header .header-navbar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover:after {
+        width: 100%;
+        left: 0; }
+  header .header-navbar .navbar .navbar-collapse .search-form {
+    position: absolute;
+    right: 0;
+    bottom: 8px; }
+    header .header-navbar .navbar .navbar-collapse .search-form .search-field {
+      border: 2px solid #FFFFFF;
+      background: none;
+      border-radius: 40px;
+      font-size: 1.4rem;
+      padding-left: 10px;
+      width: 32px;
+      color: #FFFFFF;
+      transition: all .2s ease-in-out; }
+      header .header-navbar .navbar .navbar-collapse .search-form .search-field::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #FFFFFF;
+        opacity: 1;
+        /* Firefox */ }
+      header .header-navbar .navbar .navbar-collapse .search-form .search-field:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #FFFFFF; }
+      header .header-navbar .navbar .navbar-collapse .search-form .search-field::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #FFFFFF; }
+      header .header-navbar .navbar .navbar-collapse .search-form .search-field:focus {
+        box-shadow: none; }
+    header .header-navbar .navbar .navbar-collapse .search-form .search-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.4rem;
+      margin: 9px 9px 0 0;
+      color: #FFFFFF;
+      pointer-events: none;
+      background: #f2abc5; }
+    header .header-navbar .navbar .navbar-collapse .search-form .search-button {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      background: none;
+      width: 32px;
+      height: 32px; }
+    header .header-navbar .navbar .navbar-collapse .search-form.active .search-field {
+      width: 200px;
+      padding-right: 30px; }
+    header .header-navbar .navbar .navbar-collapse .search-form.active .search-button {
+      display: block; }
 
 /*# sourceMappingURL=main.css.map */
