@@ -1,0 +1,50 @@
+footer.footer-container{
+	padding: 60px 0 20px;
+	background: linear-gradient(to bottom, $blue 0%, rgba($blue2, .8) 100%);
+	.navbar{
+		.nav-item{
+			margin: 0 10px;
+			.nav-link{
+				color: $blue1;
+				font-size: 1.6rem;
+				position: relative;
+				@media screen and (max-width: $screen-xs-max){
+					display: inline-block;
+				}
+				&:hover{
+					animation: nav-item-footer-hover .4s ease-in-out;
+				}
+				&:after{
+					content: "";
+					position: absolute;
+					left: 9%; bottom: 3px;
+					height: 1px;
+					width: 82%;
+					background: $blue1;
+					transition: all .1s ease-in-out;
+				}
+			}
+		}
+	}
+	p{
+		color: $blue1;
+	}
+	.copyrights{
+		padding-top: 60px;
+	}
+}
+
+@keyframes nav-item-footer-hover{
+	0%{
+		transform: translateY(0);
+	}
+	33%{
+		transform: translateY(-4px);
+	}
+	66%{
+		transform: translateY(4px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}

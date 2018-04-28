@@ -1,22 +1,76 @@
 header{
 	.header-navbar{
 		padding: 20px 0 20px;
-		background: $pink;
+		min-height: 85px;
+		background: $pink1;
 		.navbar{
-			.navbar-toggler{
-
+			.navbar-toggler {
+				position: absolute;
+				right: 0;
+				top: 10px;
+  				border: none;
+  				background: transparent !important;
+  				&:hover {
+    				background: transparent !important;
+  				}
+  				&:focus{
+  					outline: none;
+  				}
+  				.icon-bar {
+    				width: 28px;
+    				transition: all 0.2s;
+    				background-color: $--white;
+    				display: block;
+    				height: 3px;
+  				}
+  				.icon-bar+.icon-bar {
+    				margin-top: 5px;
+				}
+  				.top-bar {
+    				transform: rotate(45deg);
+    				transform-origin: 10% 10%;
+  				}
+  				.middle-bar {
+    				opacity: 0;
+  				}
+  				.bottom-bar {
+    				transform: rotate(-45deg);
+    				transform-origin: 10% 90%;
+  				}
+  				&.collapsed{
+				  .top-bar {
+				    transform: rotate(0);
+				  }
+				  .middle-bar {
+				    opacity: 1;
+				  }
+				  .bottom-bar {
+				    transform: rotate(0);
+				  }
+  				}
 			}
 			.navbar-collapse{
+				@media screen and (max-width: $screen-sm-max){
+					padding-top: 60px;
+					text-align: right;
+				}
 				.navbar-nav{
 					.nav-item{
 						padding-right: 10px;
 						padding-left: 10px;
+						@media screen and (max-width: $screen-sm-max){
+							padding: 0;
+						}
 						.nav-link{
 							position: relative;
 							font-size: 1.8rem;
 							text-transform: uppercase;
 							font-weight: $fw-medium;
 							color: $--white;
+							@media screen and (max-width: $screen-sm-max){
+								margin-bottom: 15px;
+								display: inline-block;
+							}
 							&:after{
 								content: "";
 								position: absolute;
@@ -25,11 +79,19 @@ header{
 								width: 82%;
 								background: $--white;
 								transition: all .1s ease-in-out;
+								@media screen and (max-width: $screen-sm-max){
+									right: 0;
+									bottom: 0;
+									left: auto;
+									width: 30px;
+								}
 							}
 							&:hover{
 								&:after{
-									width: 100%;
-									left: 0;
+									@media screen and (min-width: $screen-md-min){
+										width: 100%;
+										left: 0;
+									}
 								}
 							}
 						}
@@ -39,6 +101,13 @@ header{
 					position: absolute;
 					right: 0;
 					bottom: 8px;
+					@media screen and (max-width: $screen-sm-max){
+						left: 0;
+						right: auto;
+						top: -60px;
+						height: 34px;
+						transition: all .2s ease-in-out;
+					}
 					.search-field{
 						border: 2px solid $--white;
 						background: none;
@@ -70,7 +139,7 @@ header{
 						margin: 9px 9px 0 0;
 						color: $--white;
 						pointer-events: none;
-						background: $pink;
+						background: $pink1;
 					}
 					.search-button{
 						display: none;
@@ -91,6 +160,13 @@ header{
 						} 
 					}
 				}
+				&.show{
+				@media screen and (max-width: $screen-sm-max){
+					.search-form{
+						top: 8px;
+					}
+				}
+			}
 			}
 		}
 	}

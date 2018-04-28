@@ -9,8 +9,8 @@ from blog.models import Article, Comment
 
 # Create your views here.
 def index(request):
-    articles_list = Article.objects.all()
-    paginator = Paginator(articles_list, 9)
+    articles_list = Article.objects.all().order_by('-release_date')
+    paginator = Paginator(articles_list, 6)
     page = request.GET.get('page')
     articles = paginator.get_page(page)
 

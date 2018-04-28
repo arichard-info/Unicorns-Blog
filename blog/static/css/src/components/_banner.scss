@@ -1,0 +1,15 @@
+.banner{
+	height: 40vh;
+	position: relative;
+	margin-bottom: 60px;
+	background: linear-gradient(to bottom, $pink1 0%, rgba($pink, .8) 100%);
+}
+
+.banner-content{
+	width: 100%;
+	margin-left: -15px;
+	position: absolute;
+  	top: 50%; 
+  	transform: translateY(-50%); 
+  	text-align: center;
+}

@@ -1,0 +1,63 @@
+h1{
+	font-family: $amatic;
+	color: $--white;
+	font-size: 7.2rem;
+}
+
+h2{
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-weight: $fw-bold;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 40px;
+	@media screen and (max-width: $screen-xs-max){
+		text-align: center;
+		display: block;
+		margin-bottom: 50px;
+	}
+	&:after{
+		content: "";
+		position: absolute;
+		left: 0; bottom: -14px;
+		height: 3px;
+		width: 30%;
+		@media screen and (max-width: $screen-xs-max){
+			left: 0; right: 0;
+			margin-left: auto; margin-right: auto;
+			width: 20%;
+		}
+	}
+	&.pink{
+		color: $pink1;
+		&:after{
+			background: $pink1;
+		}
+	}
+	&.blue{
+		color: $blue1;
+		&:after{
+			background: $blue1;
+		}
+	}
+}
+
+p{
+	font-size: 1.4rem;
+	color: $grey1;
+}
+
+span.subtitle{
+	color: $--white;
+	font-size: 1.4rem;
+	position: relative;
+	line-height: 3;
+	&:before{
+		content: "";
+		position: absolute;
+		left: -10%; top: -12px;
+		height: 2px;
+		width: 120%;
+		background: $--white;
+	}
+}
