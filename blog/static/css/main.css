@@ -9,7 +9,10 @@ body {
 h1 {
   font-family: "Amatic SC", cursive;
   color: #FFFFFF;
-  font-size: 7.2rem; }
+  font-size: 4.8rem; }
+  h1.blue {
+    color: #23b9ae;
+    text-align: center; }
 
 h2 {
   font-size: 2.4rem;
@@ -46,6 +49,12 @@ h2 {
     h2.blue:after {
       background: #23b9ae; }
 
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600; }
+  h3.blue {
+    color: #23b9ae; }
+
 p {
   font-size: 1.4rem;
   color: #626262; }
@@ -63,6 +72,20 @@ span.subtitle {
     height: 2px;
     width: 120%;
     background: #FFFFFF; }
+
+.content {
+  min-height: 60vh;
+  padding-top: 50px; }
+
+.bg-blue {
+  background: #ebf5f8; }
+
+.bg-white {
+  background: #FFFFFF; }
+
+.space {
+  margin-top: 40px;
+  padding: 30px; }
 
 header .header-navbar {
   padding: 20px 0 20px;
@@ -203,8 +226,10 @@ header .header-navbar {
 .banner {
   height: 40vh;
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   background: linear-gradient(to bottom, #fe94ba 0%, rgba(242, 171, 197, 0.8) 100%); }
+  .banner h1 {
+    font-size: 7.2rem; }
 
 .banner-content {
   width: 100%;
@@ -304,7 +329,7 @@ footer.footer-container {
       color: #23b9ae;
       font-size: 1.6rem;
       position: relative; }
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 991px) {
         footer.footer-container .navbar .nav-item .nav-link {
           display: inline-block; } }
       footer.footer-container .navbar .nav-item .nav-link:hover {
@@ -332,5 +357,178 @@ footer.footer-container {
     transform: translateY(4px); }
   100% {
     transform: translateY(0); } }
+.single-container .single-content {
+  margin-top: -50px;
+  background: #FFFFFF;
+  padding: 40px 20px 75px;
+  margin-bottom: 60px; }
+
+.single-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; }
+  .single-image-container .single-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center center !important;
+    background-size: cover !important; }
+
+.single-title {
+  margin-top: 45px;
+  font-size: 2.4rem;
+  font-family: "Raleway", sans-serif;
+  color: #626262;
+  font-weight: 700; }
+
+.single-meta {
+  font-size: 1.4rem;
+  color: #626262;
+  line-height: 2.5; }
+
+.single-text {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  line-height: 1.6; }
+  .single-text p {
+    font-size: 1.4rem;
+    line-height: 1.6; }
+
+.single-comments {
+  margin-bottom: 50px; }
+  .single-comments .single-comments-list .comment {
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    padding: 25px; }
+    .single-comments .single-comments-list .comment:last-child {
+      margin-bottom: 0; }
+    .single-comments .single-comments-list .comment .comment-meta {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #626262; }
+    .single-comments .single-comments-list .comment .comment-text {
+      font-size: 1.4rem;
+      color: #626262; }
+  .single-comments .single-comments-form {
+    margin-top: 20px;
+    background: #FFFFFF;
+    padding: 30px; }
+    .single-comments .single-comments-form label {
+      display: none; }
+    .single-comments .single-comments-form input[type=text] {
+      margin: 20px 0 15px;
+      position: relative;
+      border: none;
+      border-bottom: 2px solid #d8d8d8;
+      transition: all .2s ease-in-out;
+      color: #626262; }
+      .single-comments .single-comments-form input[type=text]:focus {
+        outline: none;
+        border-color: #23b9ae; }
+    .single-comments .single-comments-form textarea {
+      border: 2px solid #d8d8d8;
+      transition: border .2s ease-in-out;
+      padding: 10px;
+      width: 100%;
+      min-height: 100px;
+      max-height: 200px;
+      color: #626262; }
+      .single-comments .single-comments-form textarea:focus {
+        outline: none;
+        border-color: #23b9ae; }
+    .single-comments .single-comments-form .submit-button {
+      margin-top: 5px;
+      padding: 4px 25px 3px;
+      background: #23b9ae;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border: none;
+      transition: all .2s ease-in-out; }
+      .single-comments .single-comments-form .submit-button:hover {
+        cursor: pointer;
+        background: rgba(35, 185, 174, 0.7); }
+
+.aside-container {
+  padding: 150px 0 0 35px; }
+  @media screen and (max-width: 991px) {
+    .aside-container {
+      display: none; } }
+
+.aside-preview-list {
+  margin-top: 25px;
+  padding: 0 55px 0 15px; }
+
+.aside-preview {
+  display: block;
+  margin-bottom: 40px; }
+  .aside-preview:hover {
+    text-decoration: none; }
+    .aside-preview:hover .aside-preview-image-container {
+      transform: scale(0.95); }
+      .aside-preview:hover .aside-preview-image-container .article-preview-image {
+        transform: scale(1.1); }
+    .aside-preview:hover .aside-preview-title {
+      transform: translateX(10px); }
+
+.aside-preview-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  transition: all .2s ease-in-out; }
+  .aside-preview-image-container .aside-preview-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center center !important;
+    background-size: cover !important;
+    transition: all .2s ease-in-out; }
+
+.aside-preview-title {
+  color: #626262;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 20px 0 0 40px;
+  position: relative;
+  transition: all .2s ease-in-out; }
+  .aside-preview-title:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 28px;
+    height: 2px;
+    width: 30px;
+    background: #626262; }
+
+.search-page .result-list {
+  margin-top: 60px; }
+  .search-page .result-list .result-item {
+    background: #FFFFFF;
+    padding: 30px;
+    margin-top: 20px;
+    display: block;
+    transition: all .2s ease-in-out; }
+    .search-page .result-list .result-item:hover {
+      text-decoration: none;
+      transform: translateX(15px); }
+    .search-page .result-list .result-item .result-title {
+      font-size: 1.6rem;
+      color: #626262;
+      font-weight: 700; }
+    .search-page .result-list .result-item .result-meta {
+      font-size: 1.2rem;
+      color: #626262;
+      font-weight: 400; }
+    .search-page .result-list .result-item .result-content {
+      font-size: 1.4rem;
+      color: #626262;
+      font-weight: 400;
+      margin: 10px 0 0 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,8 +1,11 @@
 .banner{
 	height: 40vh;
 	position: relative;
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 	background: linear-gradient(to bottom, $pink1 0%, rgba($pink, .8) 100%);
+	h1{
+		font-size: 7.2rem;
+	}
 }
 
 .banner-content{

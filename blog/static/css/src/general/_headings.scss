@@ -1,7 +1,11 @@
 h1{
 	font-family: $amatic;
 	color: $--white;
-	font-size: 7.2rem;
+	font-size: 4.8rem;
+	&.blue{
+		color: $blue1;
+		text-align: center;
+	}
 }
 
 h2{
@@ -39,6 +43,14 @@ h2{
 		&:after{
 			background: $blue1;
 		}
+	}
+}
+
+h3{
+	font-size: 1.8rem;
+	font-weight: $fw-semibold;
+	&.blue{
+		color: $blue1;
 	}
 }
 

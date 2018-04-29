@@ -1,27 +1,63 @@
 {% extends "layouts/_base.html" %}
+
+
 {% block title %}Un article{% endblock %}
+
 {% block content %}
-  <img src="{{ article.image.url}}"/>
-	<h1>{{article.title}}</h1>
-	<p> {{ article.content }}</p>
-   	<span> {{article.author}}</span>
-   	<span>{{article.release_date}}</span>
+<div class="content bg-blue"> 
+  <div class="single-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8 single-container">
+          <div class="single-content">
+            <div class="single-image-container">
+              <div class="single-image" style="background-image: url({{ article.image.url }})"></div>
+            </div>
+  	        <h1 class="single-title">{{article.title}}</h1>
+            <span class="single-meta">{{article.author}} - {{article.release_date|date:"M d, Y"}}</span>
+            <div class="single-text">
+              {{ article.content  }}
+            </div>
+          </div>
+          <div class="single-comments">
+            <h2 class="blue">Commentaires</h2>
+            <div class="single-comments-list">
+              {% for comment in comments %}
+                <div class="comment">
+                    <span class="comment-meta">{{ comment.author }} - {{ comment.created_date|date:"M d, Y" }}</span>
+                    <p class="comment-text">{{ comment.content|linebreaks }}</p>
+                </div>
+              {% empty %}
+                  <div class="no-comments">
+                    <p>Pas encore de commentaires :(</p>
+                  </div>
+              {% endfor %}
+            </div>
+            <div class="single-comments-form">
+              <h3 class="blue">Ajouter un commentaire</h3>
+              <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="submit-button">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 aside-container">
+          <h2 class="blue">Derniers articles</h2>
+          <div class="aside-preview-list">
+            {% for article_aside in last_articles %}
+              <a class="aside-preview" href="{% url 'blog:article' article_aside.slug %}">
+                <div class="aside-preview-image-container">
+                  <div class="aside-preview-image" style="background-image: url({{ article_aside.image.url }})"></div>
+                </div>
+                <h3 class="aside-preview-title">{{ article_aside.title }}</h3>
+              </a>
+            {% endfor %}
+          </a>
 
-   	<hr />
-{% for comment in article.comments.all %}
-    <div class="comment">
-
-        <div class="date">{{ comment.created_date }}</div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.content|linebreaks }}</p>
+        </div>
+      </div>
     </div>
-{% empty %}
-    <p>No comments here yet :(</p>
-{% endfor %}
-
-<h1>New comment</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Send</button>
-    </form>
+  </div>
+</div>
 {% endblock %}

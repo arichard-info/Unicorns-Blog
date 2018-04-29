@@ -18,8 +18,8 @@ class Article(models.Model):
 
  
 class Comment(models.Model):
-    content = models.TextField(verbose_name='Content')
-    author = models.CharField(max_length=200)
+    content = models.TextField(verbose_name='Contenu')
+    author = models.CharField(max_length=200, verbose_name='Pseudo')
     approved_comment = models.BooleanField(default=False)
     created_date = models.DateTimeField(default=timezone.now)
     article = models.ForeignKey(Article, related_name='comments', on_delete=models.CASCADE)

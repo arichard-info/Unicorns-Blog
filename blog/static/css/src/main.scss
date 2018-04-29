@@ -6,6 +6,7 @@
 //general
 @import 'general/body';
 @import 'general/headings';
+@import 'general/blocks';
 
 //components
 @import 'components/header';
@@ -13,6 +14,8 @@
 @import 'components/article-list';
 @import 'components/article-pagination';
 @import 'components/footer';
+@import 'components/article-single';
+@import 'components/search-page';
 
 
 

@@ -20,6 +20,8 @@ def index(request):
 
 def article(request, slug):
     article = get_object_or_404(Article, slug=slug)
+    last_articles = Article.objects.order_by('-release_date')[0:3]
+    comments = Comment.objects.filter(article=article).order_by('-created_date')
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -29,7 +31,17 @@ def article(request, slug):
             return redirect('/article/' + slug)
     else:
         form = CommentForm()
-    return render(request, 'partials/single_article.html', {'article': article, 'form' : form})
+        
+    return render(
+        request, 
+        'partials/single_article.html', 
+        {
+            'article': article, 
+            'comments': comments,
+            'form' : form, 
+            'last_articles' : last_articles
+        }
+    )
 
 
 
@@ -52,10 +64,6 @@ def search(request):
 
 def about(request):
     return render(request, 'partials/about.html', {})
-
-
-def contact(request):
-    return render(request, 'partials/contact.html', {})
 
 
 

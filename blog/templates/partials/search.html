@@ -1,19 +1,21 @@
 {% extends "layouts/_base.html" %}
 {% block title %}Résultats de recherche{% endblock %}
 
-{% block content %}	    
-<h1>Résultats de recherche</h1>
-
-{% for article in items %}
-	    	<hr />
-	        <h3 class="text-center">{{ article.title }}</h3>
-	        
-	        
-	        <p>{{ article.content|truncatechars:150 }}</p>
-	       
-	        <p>
-	            <a href="{% url 'blog:article' article.slug %}" class="btn btn-default">➡️ Read more</a>
-	        </p>
-		{% endfor %}
-
+{% block content %}	 
+	<div class="content bg-blue">  
+		<div class="search-page">  
+			<div class="container">
+				<h1 class="blue">Résultats de recherche</h1>
+				<div class="result-list">
+					{% for article in items %}
+						<a class="result-item" href="{% url 'blog:article' article.slug %}">
+				        	<h3 class="result-title">{{ article.title }}</h3>
+				        	<span class="result-meta">{{ article.author }} - {{ article.release_date|date:"M d, Y" }}</span>
+				        	<p class="result-content">{{ article.content|truncatechars:250 }}</p>
+				       	</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

@@ -1,0 +1,32 @@
+.search-page{
+	.result-list{
+		margin-top: 60px;
+		.result-item{
+			background: $--white;
+			padding: 30px;
+			margin-top: 20px;
+			display: block;
+			transition: all .2s ease-in-out;
+			&:hover{
+				text-decoration: none;
+				transform: translateX(15px);
+			}
+			.result-title{
+				font-size: 1.6rem;
+				color: $grey1;
+				font-weight: $fw-bold;
+			}
+			.result-meta{
+				font-size: 1.2rem;
+				color: $grey1;
+				font-weight: $fw-regular;
+			}
+			.result-content{
+				font-size: 1.4rem;
+				color: $grey1;
+				font-weight: $fw-regular;
+				margin: 10px 0 0 0;
+			}
+		}
+	}
+}
