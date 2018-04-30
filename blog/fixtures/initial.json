@@ -51,40 +51,65 @@
   "model": "contenttypes.contenttype",
   "pk": 7,
   "fields": {
-    "app_label": "unicorns_blog",
-    "model": "comment"
+    "app_label": "blog",
+    "model": "article"
   }
 },
 {
   "model": "contenttypes.contenttype",
   "pk": 8,
   "fields": {
-    "app_label": "unicorns_blog",
-    "model": "article"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
     "app_label": "blog",
     "model": "comment"
   }
 },
 {
-  "model": "contenttypes.contenttype",
-  "pk": 10,
+  "model": "sessions.session",
+  "pk": "0ag1uclhl85p7on8sguzdm0sfto1ny65",
   "fields": {
-    "app_label": "blog",
-    "model": "article"
+    "session_data": "NzE0YjQxZTIwZGMxZTRkYTY5MGViMzYwZWQzYzZmODlmYjMzNjI2OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiYzY4NjdjZGZiZTU2MDA3ZWVkMjMxMzE2YzFlNzNiZWVjZmNiOWNlIn0=",
+    "expire_date": "2018-05-12T21:25:12.566Z"
   }
 },
 {
   "model": "sessions.session",
-  "pk": "w64w44ezv4bz9enmcahgwy3stk1yh7qd",
+  "pk": "xyj9qqcsm8yrtmu3d1kdgjn0yc9n07e8",
   "fields": {
-    "session_data": "YmQ5YTUwM2VlOTUzODhiYzg2YWNkODM3MDIwYmQyMTVjODBkYTQ5Yjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2YjM3M2JkNTdjYTA3ZGEwOTdlNjc1MjY4N2Y0YzY3Yzc5MmQ1ODRlIn0=",
-    "expire_date": "2018-05-01T17:01:12.856Z"
+    "session_data": "NzE0YjQxZTIwZGMxZTRkYTY5MGViMzYwZWQzYzZmODlmYjMzNjI2OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiYzY4NjdjZGZiZTU2MDA3ZWVkMjMxMzE2YzFlNzNiZWVjZmNiOWNlIn0=",
+    "expire_date": "2018-05-11T21:38:32.240Z"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "content": "C'est vraiment super !",
+    "author": "Jean-Onche le musclay",
+    "approved_comment": false,
+    "created_date": "2018-04-29T19:09:59.479Z",
+    "article": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "content": "Wow c'est vraiment styl\u00e9 !",
+    "author": "Paul Bigourd",
+    "approved_comment": false,
+    "created_date": "2018-04-29T19:14:53.264Z",
+    "article": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "content": "J'aime le pain !",
+    "author": "Guigui",
+    "approved_comment": false,
+    "created_date": "2018-04-29T19:20:02.076Z",
+    "article": 1
   }
 },
 {
@@ -253,116 +278,62 @@
   "model": "auth.permission",
   "pk": 19,
   "fields": {
-    "name": "Can add Commentaire",
+    "name": "Can add Article",
     "content_type": 7,
-    "codename": "add_comment"
+    "codename": "add_article"
   }
 },
 {
   "model": "auth.permission",
   "pk": 20,
   "fields": {
-    "name": "Can change Commentaire",
+    "name": "Can change Article",
     "content_type": 7,
-    "codename": "change_comment"
+    "codename": "change_article"
   }
 },
 {
   "model": "auth.permission",
   "pk": 21,
   "fields": {
-    "name": "Can delete Commentaire",
+    "name": "Can delete Article",
     "content_type": 7,
-    "codename": "delete_comment"
+    "codename": "delete_article"
   }
 },
 {
   "model": "auth.permission",
   "pk": 22,
   "fields": {
-    "name": "Can add Article",
+    "name": "Can add Commentaire",
     "content_type": 8,
-    "codename": "add_article"
+    "codename": "add_comment"
   }
 },
 {
   "model": "auth.permission",
   "pk": 23,
   "fields": {
-    "name": "Can change Article",
+    "name": "Can change Commentaire",
     "content_type": 8,
-    "codename": "change_article"
+    "codename": "change_comment"
   }
 },
 {
   "model": "auth.permission",
   "pk": 24,
   "fields": {
-    "name": "Can delete Article",
-    "content_type": 8,
-    "codename": "delete_article"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add Commentaire",
-    "content_type": 9,
-    "codename": "add_comment"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change Commentaire",
-    "content_type": 9,
-    "codename": "change_comment"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
     "name": "Can delete Commentaire",
-    "content_type": 9,
+    "content_type": 8,
     "codename": "delete_comment"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can add Article",
-    "content_type": 10,
-    "codename": "add_article"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can change Article",
-    "content_type": 10,
-    "codename": "change_article"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can delete Article",
-    "content_type": 10,
-    "codename": "delete_article"
   }
 },
 {
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$100000$w1bLxAU3K50A$XAQNwLqTGPceNHY67twMG73VPSW9Mpv3BEMBWNyWIO0=",
-    "last_login": "2018-04-17T17:01:12.854Z",
+    "password": "pbkdf2_sha256$100000$dN5nwj0RTeU7$MsSbADYMEauAXwcKzr8z6k1zauEghdNyz4B59qJuJG4=",
+    "last_login": "2018-04-28T21:25:12.563Z",
     "is_superuser": true,
     "username": "arichard",
     "first_name": "",
@@ -370,97 +341,104 @@
     "email": "antoiner.info@gmail.com",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2018-04-17T17:00:17.207Z",
+    "date_joined": "2018-04-27T21:38:14.116Z",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "auth.user",
-  "pk": 2,
-  "fields": {
-    "password": "pbkdf2_sha256$100000$59F7590Y8oyi$FLKE4M5DgBEftxYuMV9kj/n7S4y7jl4FM55Xdl4qsZQ=",
-    "last_login": null,
-    "is_superuser": true,
-    "username": "pbigourd",
-    "first_name": "",
-    "last_name": "",
-    "email": "paulbigourd@gmail.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2018-04-17T17:02:20.979Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "blog.comment",
+  "model": "blog.article",
   "pk": 1,
   "fields": {
-    "title": "Un super commentaire",
-    "slug": "comment1",
-    "content": "HEHEHEEEEEEEEE",
-    "author": 1
+    "title": "Un superbe article",
+    "slug": "un-superbe-article",
+    "author": 1,
+    "release_date": "2018-04-27T21:39:51.651Z",
+    "content": "<p>Nam a augue at diam gravida maximus. Nullam vel lectus mi. Nam justo magna, facilisis eu aliquam sit amet, auctor id mi. Nam consectetur mattis dolor nec laoreet. Praesent magna nulla, sollicitudin nec ipsum ut, interdum aliquam ante. Phasellus et ipsum mauris. Etiam vestibulum elit vel augue ullamcorper gravida. Morbi sed venenatis leo. Etiam non tincidunt ex, a mollis nulla. Duis elementum, libero pellentesque ultrices tristique, sapien urna posuere neque, in imperdiet est odio at odio. Duis vitae feugiat dolor. <br />\r\nNam a augue at diam gravida maximus. Nullam vel lectus mi. Nam justo magna, facilisis eu aliquam sit amet, auctor id mi. Nam consectetur mattis dolor nec laoreet. Praesent magna nulla, sollicitudin nec ipsum ut, interdum aliquam ante. Phasellus et ipsum mauris. Etiam vestibulum elit vel augue ullamcorper gravida. Morbi sed venenatis leo. Etiam non tincidunt ex, a mollis nulla. Duis elementum, libero pellentesque ultrices tristique, sapien urna posuere neque, in imperdiet est odio at odio. Duis vitae feugiat dolor. <br />\r\nNam a augue at diam gravida maximus. Nullam vel lectus mi. Nam justo magna, facilisis eu aliquam sit amet, auctor id mi. Nam consectetur mattis dolor nec laoreet. Praesent magna nulla, sollicitudin nec ipsum ut, interdum aliquam ante. Phasellus et ipsum mauris. Etiam vestibulum elit vel augue ullamcorper gravida. Morbi sed venenatis leo. Etiam non tincidunt ex, a mollis nulla. Duis elementum, libero pellentesque ultrices tristique, sapien urna posuere neque, in imperdiet est odio at odio. Duis vitae feugiat dolor. <br />\r\nNam a augue at diam gravida maximus. Nullam vel lectus mi. Nam justo magna, facilisis eu aliquam sit amet, auctor id mi. Nam consectetur mattis dolor nec laoreet. Praesent magna nulla, sollicitudin nec ipsum ut, interdum aliquam ante. Phasellus et ipsum mauris. Etiam vestibulum elit vel augue ullamcorper gravida. Morbi sed venenatis leo. Etiam non tincidunt ex, a mollis nulla. Duis elementum, libero pellentesque ultrices tristique, sapien urna posuere neque, in imperdiet est odio at odio. Duis vitae feugiat dolor. </p>",
+    "image": "image/1393662_1.jpg"
   }
 },
 {
-  "model": "blog.comment",
+  "model": "blog.article",
   "pk": 2,
   "fields": {
-    "title": "Epoustouflant",
-    "slug": "epoustouflant",
-    "content": "Hodor, hodor. Hodor. Hodor, hodor... Hodor hodor hodor. Hodor hodor HODOR! Hodor hodor hodor hodor... Hodor hodor hodor, hodor, hodor hodor. Hodor. Hodor hodor; hodor hodor? Hodor, hodor... Hodor hodor HODOR hodor, hodor HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor. Hodor hodor hodor; hodor hodor hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor? Hodor. Hodor HODOR hodor, hodor hodor hodor hodor?! Hodor hodor HODOR! Hodor hodor, hodor. Hodor hodor. Hodor.",
-    "author": 2
+    "title": "Un autre article",
+    "slug": "un-autre-article",
+    "author": 1,
+    "release_date": "2018-04-27T21:40:18.362Z",
+    "content": "Nam a augue at diam gravida maximus. Nullam vel lectus mi. Nam justo magna, facilisis eu aliquam sit amet, auctor id mi. Nam consectetur mattis dolor nec laoreet. Praesent magna nulla, sollicitudin nec ipsum ut, interdum aliquam ante. Phasellus et ipsum mauris. Etiam vestibulum elit vel augue ullamcorper gravida. Morbi sed venenatis leo. Etiam non tincidunt ex, a mollis nulla. Duis elementum, libero pellentesque ultrices tristique, sapien urna posuere neque, in imperdiet est odio at odio. Duis vitae feugiat dolor.\r\n\r\nSed tincidunt vestibulum rhoncus. Fusce non blandit mauris. Vivamus at luctus eros. Donec gravida tristique placerat. Nullam a ex sapien. Nunc pulvinar tempor quam. Ut tempus augue leo, in dignissim tortor placerat id. Nullam rutrum efficitur nisl in semper. Fusce orci dolor, volutpat in gravida a, dignissim in libero. Duis dignissim hendrerit nisl id laoreet. Aliquam erat volutpat.\r\n\r\nNam id ante vel urna lobortis maximus quis ut lacus. Etiam tincidunt varius condimentum. Praesent finibus ipsum vitae purus luctus iaculis. Proin urna ex, fermentum vel congue a, tincidunt id libero. Proin id est nisl. Aenean porttitor velit eu augue molestie tempor. Mauris imperdiet facilisis laoreet. Nullam rhoncus at dolor eu ornare. Integer aliquam eros laoreet, faucibus mi sed, finibus justo. Suspendisse rhoncus erat mi, viverra vehicula sem pellentesque non. Integer quis lectus blandit, ultricies erat sed, blandit eros. In scelerisque leo eget augue sodales commodo.\r\n\r\nInterdum et malesuada fames ac ante ipsum primis in faucibus. Quisque interdum sed augue ac hendrerit. Suspendisse at turpis nisl. Fusce ut pulvinar felis. Praesent consequat sapien sit amet tincidunt vehicula. Phasellus vestibulum ligula ut ante dapibus tristique vitae sit amet sem. Mauris eget venenatis turpis. Sed id orci egestas, semper erat in, placerat urna.\r\n\r\nDuis vel mauris feugiat, accumsan magna vel, bibendum nulla. Curabitur sed ex a metus finibus faucibus. Praesent ex nunc, consequat eget finibus et, ultrices vel urna. Morbi lacinia sapien massa, a feugiat urna molestie sed. Donec nisi nisl, hendrerit sit amet pharetra ac, luctus eu ipsum. Duis euismod vestibulum nisl a consequat. Vivamus volutpat laoreet odio. Etiam sit amet elit pulvinar, pharetra est at, mattis magna.",
+    "image": "image/jetpack_unicorn.jpg"
   }
 },
 {
-  "model": "blog.comment",
+  "model": "blog.article",
   "pk": 3,
   "fields": {
-    "title": "WOW",
-    "slug": "wow",
-    "content": "Hodor, hodor. Hodor. Hodor, hodor... Hodor hodor hodor. Hodor hodor HODOR! Hodor hodor hodor hodor... Hodor hodor hodor, hodor, hodor hodor. Hodor. Hodor hodor; hodor hodor? Hodor, hodor... Hodor hodor HODOR hodor, hodor HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor. Hodor hodor hodor; hodor hodor hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor? Hodor. Hodor HODOR hodor, hodor hodor hodor hodor?! Hodor hodor HODOR! Hodor hodor, hodor. Hodor hodor. Hodor.",
-    "author": 1
-  }
-},
-{
-  "model": "blog.article",
-  "pk": 1,
-  "fields": {
-    "title": "Paul Bigourd est de retour",
-    "slug": "retour-paul-bigourd",
+    "title": "Et encore un article vraiment incroyable du cul !",
+    "slug": "encore-un-article",
     "author": 1,
-    "release_date": "2018-04-24T20:50:55.901Z",
-    "content": "Les marmottes (Marmota) forment un genre de mammif\u00e8re fouisseur de l'ordre des rongeurs.  L'esp\u00e8ce la plus connue en Europe est la marmotte vivant dans les montagnes (Marmota marmota). En Am\u00e9rique du Nord, la Marmota monax, appel\u00e9e famili\u00e8rement \u00ab siffleux \u00bb au Qu\u00e9bec, constitue l'esp\u00e8ce la plus courante.",
-    "comments": [
-      1
-    ]
+    "release_date": "2018-04-28T21:26:59.385Z",
+    "content": "Hodor hodor - hodor hodor HODOR hodor, hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor HODOR hodor, hodor hodor hodor hodor? Hodor hodor - hodor hodor hodor hodor hodor? Hodor hodor - hodor; hodor hodor hodor?",
+    "image": "image/fat_unicorn.jpg"
   }
 },
 {
   "model": "blog.article",
-  "pk": 2,
+  "pk": 4,
   "fields": {
-    "title": "Ceci est un bel article",
-    "slug": "un-bel-article",
-    "author": 2,
-    "release_date": "2018-04-24T21:48:13.983Z",
-    "content": "Hodor, hodor. Hodor. Hodor, hodor... Hodor hodor hodor. Hodor hodor HODOR! Hodor hodor hodor hodor... Hodor hodor hodor, hodor, hodor hodor. Hodor. Hodor hodor; hodor hodor? Hodor, hodor... Hodor hodor HODOR hodor, hodor HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor. Hodor hodor hodor; hodor hodor hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor? Hodor. Hodor HODOR hodor, hodor hodor hodor hodor?! Hodor hodor HODOR! Hodor hodor, hodor. Hodor hodor. Hodor.",
-    "comments": [
-      2,
-      3
-    ]
+    "title": "Le chat licorne est de retour ! :O",
+    "slug": "chat-licorne",
+    "author": 1,
+    "release_date": "2018-04-28T21:31:28.113Z",
+    "content": "Hodor hodor - hodor hodor HODOR hodor, hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor HODOR hodor, hodor hodor hodor hodor? Hodor hodor - hodor hodor hodor hodor hodor? Hodor hodor - hodor; hodor hodor hodor?",
+    "image": "image/cat_unicorn.jpg"
+  }
+},
+{
+  "model": "blog.article",
+  "pk": 5,
+  "fields": {
+    "title": "Un chien licorne",
+    "slug": "chien-licorne",
+    "author": 1,
+    "release_date": "2018-04-28T21:33:10.093Z",
+    "content": "Hodor hodor - hodor hodor HODOR hodor, hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor HODOR hodor, hodor hodor hodor hodor? Hodor hodor - hodor hodor hodor hodor hodor? Hodor hodor - hodor; hodor hodor hodor?",
+    "image": "image/chien_licorne.jpg"
+  }
+},
+{
+  "model": "blog.article",
+  "pk": 6,
+  "fields": {
+    "title": "Un bo dessin de likorn",
+    "slug": "un-bo-dessin",
+    "author": 1,
+    "release_date": "2018-04-28T21:41:17.190Z",
+    "content": "Hodor hodor - hodor hodor HODOR hodor, hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor HODOR hodor, hodor hodor hodor hodor? Hodor hodor - hodor hodor hodor hodor hodor? Hodor hodor - hodor; hodor hodor hodor?",
+    "image": "image/dessin-licorne-moche.png"
+  }
+},
+{
+  "model": "blog.article",
+  "pk": 7,
+  "fields": {
+    "title": "Encore une dure journ\u00e9e",
+    "slug": "dure-journee",
+    "author": 1,
+    "release_date": "2018-04-28T21:43:55.972Z",
+    "content": "Hodor hodor - hodor hodor HODOR hodor, hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor HODOR hodor, hodor hodor hodor hodor? Hodor hodor - hodor hodor hodor hodor hodor? Hodor hodor - hodor; hodor hodor hodor?",
+    "image": "image/licorne-masque.jpg"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 1,
   "fields": {
-    "action_time": "2018-04-24T20:44:41.773Z",
+    "action_time": "2018-04-27T21:39:51.655Z",
     "user": 1,
-    "content_type": 9,
+    "content_type": 7,
     "object_id": "1",
-    "object_repr": "Un beau commentaire",
+    "object_repr": "Un superbe article",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -469,24 +447,24 @@
   "model": "admin.logentry",
   "pk": 2,
   "fields": {
-    "action_time": "2018-04-24T20:47:58.073Z",
+    "action_time": "2018-04-27T21:40:18.366Z",
     "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "Paul Bigourd est vraiment tr\u00e8s beau",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"slug\"]}}]"
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Un autre article",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 3,
   "fields": {
-    "action_time": "2018-04-24T20:50:55.908Z",
+    "action_time": "2018-04-28T21:26:59.388Z",
     "user": 1,
-    "content_type": 10,
-    "object_id": "1",
-    "object_repr": "Paul Bigourd est de retour",
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Et encore un article !",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -495,11 +473,11 @@
   "model": "admin.logentry",
   "pk": 4,
   "fields": {
-    "action_time": "2018-04-24T21:47:10.488Z",
+    "action_time": "2018-04-28T21:31:28.117Z",
     "user": 1,
-    "content_type": 9,
-    "object_id": "2",
-    "object_repr": "Epoustouflant",
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Le chat licorne est de retour ! :O",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -508,11 +486,11 @@
   "model": "admin.logentry",
   "pk": 5,
   "fields": {
-    "action_time": "2018-04-24T21:47:44.201Z",
+    "action_time": "2018-04-28T21:33:10.096Z",
     "user": 1,
-    "content_type": 9,
-    "object_id": "3",
-    "object_repr": "WOW",
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Un chien licorne",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -521,26 +499,52 @@
   "model": "admin.logentry",
   "pk": 6,
   "fields": {
-    "action_time": "2018-04-24T21:48:13.987Z",
+    "action_time": "2018-04-28T21:33:35.831Z",
     "user": 1,
-    "content_type": 10,
-    "object_id": "2",
-    "object_repr": "Ceci est un bel article",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Et encore un article vraiment incroyable du cul !",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"title\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 7,
   "fields": {
-    "action_time": "2018-04-25T20:36:25.350Z",
+    "action_time": "2018-04-28T21:41:17.193Z",
     "user": 1,
-    "content_type": 9,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Un bo dessin de likorn",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2018-04-28T21:43:55.975Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Encore une dure journ\u00e9e",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2018-04-29T16:53:03.793Z",
+    "user": 1,
+    "content_type": 7,
     "object_id": "1",
-    "object_repr": "Un super commentaire",
+    "object_repr": "Un superbe article",
     "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"title\", \"content\"]}}]"
+    "change_message": "[{\"changed\": {\"fields\": [\"content\"]}}]"
   }
 }
 ]
