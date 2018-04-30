@@ -48,6 +48,7 @@
             {% for article_aside in last_articles %}
               <a class="aside-preview" href="{% url 'blog:article' article_aside.slug %}">
                 <div class="aside-preview-image-container">
+                  <span class="aside-preview-comments"><i class="fas fa-comment"></i>  {{ article_aside.comments.count }}</span>
                   <div class="aside-preview-image" style="background-image: url({{ article_aside.image.url }})"></div>
                 </div>
                 <h3 class="aside-preview-title">{{ article_aside.title }}</h3>

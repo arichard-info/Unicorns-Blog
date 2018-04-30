@@ -9,6 +9,9 @@
 		text-decoration: none;
 		.article-preview-image-container{
 			transform: scale(.95);
+			.article-preview-comments{
+				opacity: 1;
+			}
 			.article-preview-image{
 				transform: scale(1.1)
 			}
@@ -26,6 +29,23 @@
 	margin-bottom: 15px;
 	overflow: hidden;
 	transition: all .2s ease-in-out;
+	position: relative;
+	.article-preview-comments{
+		transition: all .2s ease-in-out;
+		opacity: 0;
+		background: $pink1;
+		display: block;
+		z-index: 100;
+		padding: 5px 25px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		font-size: 1.5rem;
+		color: $--white;
+		i{
+			margin-right: 5px;
+		}
+	}
 	.article-preview-image{
 		position: absolute;
 		top: 0;
