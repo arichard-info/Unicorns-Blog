@@ -52,9 +52,13 @@ def search(request):
         results = Article.objects.filter(Q(title__icontains = query) | Q(content__icontains = query))
     else:
         results = Article.objects.all()
+
+    nb_results = results.count()
         
     context = {
         'items' : results,
+        'nb_results' : nb_results,
+        'query_search' : query,
     }
 
     return render(request, template, context)

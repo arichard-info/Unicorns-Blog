@@ -249,6 +249,8 @@ header .header-navbar {
     text-decoration: none; }
     .article-preview:hover .article-preview-image-container {
       transform: scale(0.95); }
+      .article-preview:hover .article-preview-image-container .article-preview-comments {
+        opacity: 1; }
       .article-preview:hover .article-preview-image-container .article-preview-image {
         transform: scale(1.1); }
     .article-preview:hover .article-preview-meta {
@@ -260,7 +262,22 @@ header .header-navbar {
   padding-top: 56.25%;
   margin-bottom: 15px;
   overflow: hidden;
-  transition: all .2s ease-in-out; }
+  transition: all .2s ease-in-out;
+  position: relative; }
+  .article-preview-image-container .article-preview-comments {
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    background: #fe94ba;
+    display: block;
+    z-index: 100;
+    padding: 5px 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 1.5rem;
+    color: #FFFFFF; }
+    .article-preview-image-container .article-preview-comments i {
+      margin-right: 5px; }
   .article-preview-image-container .article-preview-image {
     position: absolute;
     top: 0;
@@ -480,6 +497,18 @@ footer.footer-container {
   width: 100%;
   padding-top: 56.25%;
   transition: all .2s ease-in-out; }
+  .aside-preview-image-container .aside-preview-comments {
+    background: #23b9ae;
+    display: block;
+    z-index: 100;
+    padding: 5px 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 1.5rem;
+    color: #FFFFFF; }
+    .aside-preview-image-container .aside-preview-comments i {
+      margin-right: 5px; }
   .aside-preview-image-container .aside-preview-image {
     position: absolute;
     top: 0;
@@ -506,29 +535,55 @@ footer.footer-container {
     width: 30px;
     background: #626262; }
 
-.search-page .result-list {
-  margin-top: 60px; }
-  .search-page .result-list .result-item {
-    background: #FFFFFF;
-    padding: 30px;
-    margin-top: 20px;
-    display: block;
-    transition: all .2s ease-in-out; }
-    .search-page .result-list .result-item:hover {
-      text-decoration: none;
-      transform: translateX(15px); }
-    .search-page .result-list .result-item .result-title {
-      font-size: 1.6rem;
-      color: #626262;
-      font-weight: 700; }
-    .search-page .result-list .result-item .result-meta {
-      font-size: 1.2rem;
-      color: #626262;
-      font-weight: 400; }
-    .search-page .result-list .result-item .result-content {
+.search-page {
+  padding-bottom: 50px; }
+  .search-page .result-list {
+    margin-top: 60px; }
+    .search-page .result-list .results {
+      margin-bottom: 40px; }
+    .search-page .result-list .result-recap {
       font-size: 1.4rem;
-      color: #626262;
-      font-weight: 400;
-      margin: 10px 0 0 0; }
+      color: #626262; }
+    .search-page .result-list .result-item {
+      background: #FFFFFF;
+      padding: 30px;
+      margin-top: 20px;
+      display: block;
+      transition: all .2s ease-in-out; }
+      .search-page .result-list .result-item.hidden {
+        display: none; }
+      .search-page .result-list .result-item:hover {
+        text-decoration: none;
+        transform: translateX(-10px) translateY(-5px);
+        -webkit-box-shadow: 10px 8px 0px 0px rgba(216, 216, 216, 0.8);
+        -moz-box-shadow: 10px 8px 0px 0px rgba(216, 216, 216, 0.8);
+        box-shadow: 10px 8px 0px 0px rgba(216, 216, 216, 0.8); }
+      .search-page .result-list .result-item .result-title {
+        font-size: 1.6rem;
+        color: #626262;
+        font-weight: 700; }
+      .search-page .result-list .result-item .result-meta {
+        font-size: 1.2rem;
+        color: #626262;
+        font-weight: 400; }
+      .search-page .result-list .result-item .result-content {
+        font-size: 1.4rem;
+        color: #626262;
+        font-weight: 400;
+        margin: 10px 0 0 0; }
+    .search-page .result-list .extend-results-button {
+      background: #23b9ae;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 0;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 7px 25px 6px;
+      letter-spacing: 1px; }
+      .search-page .result-list .extend-results-button.hidden {
+        display: none; }
+      .search-page .result-list .extend-results-button:hover {
+        cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

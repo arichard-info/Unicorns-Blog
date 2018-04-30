@@ -7,13 +7,23 @@
 			<div class="container">
 				<h1 class="blue">Résultats de recherche</h1>
 				<div class="result-list">
+					<div class="text-center">
+						<span class="result-recap">{{ nb_results }} résultats pour "{{ query_search }}"</span>
+					</div>
+					<div class="results">
 					{% for article in items %}
-						<a class="result-item" href="{% url 'blog:article' article.slug %}">
+						<a class="result-item {% if forloop.counter > 3 %} hidden {% endif %}" href="{% url 'blog:article' article.slug %}">
 				        	<h3 class="result-title">{{ article.title }}</h3>
 				        	<span class="result-meta">{{ article.author }} - {{ article.release_date|date:"M d, Y" }}</span>
 				        	<p class="result-content">{{ article.content|truncatechars:250 }}</p>
 				       	</a>
 					{% endfor %}
+					</div>
+					{% if nb_results > 3 %}
+						<div class="result-button text-center">
+							<button class="extend-results-button" id="extend-results-button">Tout afficher</button>
+						</div>
+					{% endif %}
 				</div>
 			</div>
 		</div>

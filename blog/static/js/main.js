@@ -3,10 +3,17 @@ $(function() {
     	$(event.currentTarget).parent().addClass("active");
     })
 
-     $(document).click(function(event) { 
+     $(document).on("click", function(event) { 
 	    if(!$(event.target).closest('#search-form').length) {
 	      
 	            $('#search-form').removeClass("active");
 	    }        
 	});
+
+     $("#extend-results-button").on("click", function(event){
+     	$('.result-item').each(function(){
+		  $(this).removeClass('hidden')
+		});
+		$(this).addClass("hidden");
+     })
 });
