@@ -74,6 +74,23 @@ header{
 								margin-bottom: 15px;
 								display: inline-block;
 							}
+							&.active{
+								&:before{
+									content: "";
+									position: absolute;
+									left: 15%; bottom: -2px;
+									height: 2px;
+									width: 70%;
+									background: $--white;
+									transition: all .1s ease-in-out;
+									@media screen and (max-width: $screen-sm-max){
+										right: 0;
+										bottom: -4px;
+										left: auto;
+										width: 25px;
+									}
+								}
+							}
 							&:after{
 								content: "";
 								position: absolute;
