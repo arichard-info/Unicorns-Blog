@@ -1,0 +1,27 @@
+.logo{
+	position: absolute;
+	left: 0;
+	top: -16px;
+	z-index: 1000;
+	&:hover{
+		text-decoration: none;
+	}
+	.logo-img{
+		width: 120px;
+		height: auto;
+		transform: translateX(-35px);
+	}
+	.logo-title{
+		text-transform: uppercase;
+		font-weight: $fw-bold;
+		letter-spacing: 1px;
+		font-size: 1.6rem;
+		color: $--white;
+		text-decoration: none;
+		display: inline-block;
+		transform: translateY(8px);
+		&.right{
+			transform: translateY(8px) translateX(-65px);
+		}
+	}
+}
