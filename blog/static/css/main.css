@@ -224,7 +224,7 @@ header .header-navbar {
       display: block; }
   @media screen and (max-width: 991px) {
     header .header-navbar .navbar .navbar-collapse.show .search-form {
-      top: 8px; } }
+      top: 80px; } }
 
 .banner {
   height: 40vh;
@@ -591,24 +591,24 @@ footer.footer-container {
 .logo {
   position: absolute;
   left: 0;
-  top: -16px;
+  top: 0;
   z-index: 1000; }
   .logo:hover {
     text-decoration: none; }
-  .logo .logo-img {
-    width: 120px;
-    height: auto;
-    transform: translateX(-35px); }
   .logo .logo-title {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #FFFFFF;
     text-decoration: none;
     display: inline-block;
-    transform: translateY(8px); }
-    .logo .logo-title.right {
-      transform: translateY(8px) translateX(-65px); }
+    transform: translateY(8px);
+    transition: all .3s ease-in-out;
+    text-align: right;
+    line-height: .9; }
+  @media screen and (max-width: 991px) {
+    .logo {
+      left: 15px; } }
 
 /*# sourceMappingURL=main.css.map */

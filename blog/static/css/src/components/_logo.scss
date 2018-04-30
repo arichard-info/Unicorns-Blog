@@ -1,27 +1,26 @@
 .logo{
 	position: absolute;
 	left: 0;
-	top: -16px;
+	top: 0;
 	z-index: 1000;
 	&:hover{
 		text-decoration: none;
-	}
-	.logo-img{
-		width: 120px;
-		height: auto;
-		transform: translateX(-35px);
 	}
 	.logo-title{
 		text-transform: uppercase;
 		font-weight: $fw-bold;
 		letter-spacing: 1px;
-		font-size: 1.6rem;
+		font-size: 2rem;
 		color: $--white;
 		text-decoration: none;
 		display: inline-block;
 		transform: translateY(8px);
-		&.right{
-			transform: translateY(8px) translateX(-65px);
-		}
+		transition: all .3s ease-in-out;
+		text-align: right;
+		line-height: .9;
+	}
+
+	@media screen and (max-width: $screen-sm-max){
+		left: 15px;
 	}
 }
