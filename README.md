@@ -1,3 +1,4 @@
+
 # Projet Unicorns_Blog
 
 Projet réalisé en python sur le framework Django
@@ -30,6 +31,10 @@ Se placer dans le dossier du projet :
     $ cd unicorns_blog
     $ pip install -r requirements.txt
     $ npm install
+
+Si les sources de CKEditor (éditeur HTML du projet) sont absentes lors de l'installation, il faudra les installer. Pour cela, la commande est la suivante : 
+
+    $ python manage.py collectstatic
     
 ### Lancement du serveur : 
 
