@@ -8,7 +8,7 @@ $(function() {
 	      
 	            $('#search-form').removeClass("active");
 	    }        
-	});
+	})
 
      $("#extend-results-button").on("click", function(event){
      	$('.result-item').each(function(){
@@ -16,4 +16,6 @@ $(function() {
 		});
 		$(this).addClass("hidden");
      })
+
+     $("iframe").wrap("<div class='iframe-wrapper'/>");
 });
