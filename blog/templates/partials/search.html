@@ -15,7 +15,7 @@
 						<a class="result-item {% if forloop.counter > 3 %} hidden {% endif %}" href="{% url 'blog:article' article.slug %}">
 				        	<h3 class="result-title">{{ article.title }}</h3>
 				        	<span class="result-meta">{{ article.author }} - {{ article.release_date|date:"M d, Y" }}</span>
-				        	<p class="result-content">{{ article.content|truncatechars:250 }}</p>
+				        	<div class="result-content">{{ article.content|safe|truncatechars_html:250 }}</div>
 				       	</a>
 					{% endfor %}
 					</div>

@@ -16,7 +16,7 @@
   	        <h1 class="single-title">{{article.title}}</h1>
             <span class="single-meta">{{article.author}} - {{article.release_date|date:"M d, Y"}}</span>
             <div class="single-text">
-              {{ article.content  }}
+              {{ article.content|safe  }}
             </div>
           </div>
           <div class="single-comments">
