@@ -73,3 +73,35 @@ span.subtitle{
 		background: $--white;
 	}
 }
+
+.single-text{
+	margin-top: 30px;
+	font-size: 1.4rem;
+	line-height: 1.6;
+	p{
+		font-size: 1.4rem;
+		line-height: 1.6;
+	}
+	h2{
+		font-size: 2rem;
+		text-transform: uppercase;
+		color: $blue1;
+		margin-bottom: 30px;
+	}
+	h3{
+		font-size: 1.8rem;
+		color: $grey1;
+		margin-bottom: 10px;
+	}
+	a{
+		color: $blue1;
+		font-weight: $fw-medium;
+	}
+	img{
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 100%;
+		height: auto!important;
+	}
+}
