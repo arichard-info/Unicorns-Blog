@@ -18,4 +18,9 @@ $(function() {
      })
 
      $("iframe").wrap("<div class='iframe-wrapper'/>");
+
+
+     $('#cookiebox button').on('click', function(event){
+     	$('#cookiebox').addClass("hidden");
+     })
 });
