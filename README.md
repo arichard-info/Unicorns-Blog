@@ -2,6 +2,7 @@
 # Projet Unicorns_Blog
 
 Projet réalisé en python sur le framework Django
+Les captures écrans du rendu final se trouvent dans le dossier 'captures' :)
 
 ### Pré-requis : 
 - Python : [Site officiel](https://www.python.org/downloads/)
